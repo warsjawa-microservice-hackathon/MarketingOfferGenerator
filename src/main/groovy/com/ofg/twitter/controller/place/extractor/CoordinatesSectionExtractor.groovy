@@ -24,7 +24,7 @@ class CoordinatesSectionExtractor implements PlaceExtractor {
         if (parsedTweet.coordinates == null) {
             return Optional.empty()
         }
-        def(long longitude, long latitude) = parsedTweet.coordinates.coordinates
+        def(Double longitude, Double latitude) = parsedTweet.coordinates.coordinates
         Optional<PlaceDetails> placeDetails = cityFinder.findCityFromCoordinates(longitude, latitude)
         return placeIfPresentOrEmptyOptional(placeDetails)
     }
