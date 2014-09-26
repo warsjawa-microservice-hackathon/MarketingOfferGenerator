@@ -21,7 +21,6 @@ import static com.ofg.config.BasicProfiles.*
 @ComponentScan(basePackages = ["com.ofg.microservice", "com.ofg.loan"])
 @EnableCaching
 @EnableAsync
-@EnableMongoRepositories(basePackages = "com.ofg.loan")
 class Application {
 
     static void main(String[] args) {
