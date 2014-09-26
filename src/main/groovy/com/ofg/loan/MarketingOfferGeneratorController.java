@@ -1,5 +1,6 @@
 package com.ofg.loan;
 
+import com.wordnik.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import javax.ws.rs.PathParam;
 
 @RestController
 @RequestMapping(value = "/api/marketing/")
+@Api(value = "marketingOfferGenerator", description = "Manages Loan marketing offers")
 class MarketingOfferGeneratorController {
 
     private MarketingOfferGenerator marketingOfferGenerator;

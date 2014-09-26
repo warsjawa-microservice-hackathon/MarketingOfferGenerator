@@ -79,6 +79,8 @@ repositories {
 }
 
 dependencies {
+    compile 'org.jongo:jongo:1.1'
+
     compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-actuator:$springBootVersion"
     compile "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion"
