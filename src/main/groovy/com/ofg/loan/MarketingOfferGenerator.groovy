@@ -11,7 +11,7 @@ class MarketingOfferGenerator {
     @Autowired
     LoanApplicationRepository loanApplicationRepository
 
-    public void save(String loanApplicationId, LoanApplication loanApplication) {
+    void save(String loanApplicationId, LoanApplication loanApplication) {
         log.info("Save loan {}.", loanApplicationId)
         loanApplication.setId(loanApplicationId)
         loanApplicationRepository.save(loanApplication)

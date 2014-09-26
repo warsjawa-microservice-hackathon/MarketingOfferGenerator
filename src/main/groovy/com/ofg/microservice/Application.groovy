@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.EnableCaching
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.EnableAspectJAutoProxy
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories
 import org.springframework.scheduling.annotation.EnableAsync
 
 import static com.ofg.config.BasicProfiles.*
@@ -20,6 +21,7 @@ import static com.ofg.config.BasicProfiles.*
 @ComponentScan(basePackages = ["com.ofg.microservice", "com.ofg.loan"])
 @EnableCaching
 @EnableAsync
+@EnableMongoRepositories(basePackages = "com.ofg.loan")
 class Application {
 
     static void main(String[] args) {
